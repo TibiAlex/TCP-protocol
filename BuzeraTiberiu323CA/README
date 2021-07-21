@@ -1,0 +1,26 @@
+Buzera Tiberiu 323CA
+
+Tema2 PC - Aplicatie client-server TCP si UDP pentru gestionarea mesajelor
+
+Pentru aceasta tema am folosit scheletul laboratorului 8, despre TCP si 
+multiplexare I/O gasit pe site-ul https://ocw.cs.pub.ro/courses/pc/laboratoare/08.
+
+Acest schelet contine un fisier server.c un fisier client.c si un makefile.
+
+Am modificat fisierul client astfel incat sa poata primi comanda inchidere de la
+server astfel inchizandu-se odata cu inchiderea server-ului, si am facut sa poata
+primi 3 comenzi in terminal, exit, subscribe si unsubscribe, fiecare trimitand 
+la server informatii.
+
+Am modificat fisierul server astfel incat sa poata primi comanda exit in terminal
+si sa inchida toti clientii, sa poata sa conecteze si sa gestioneze clientii TCP
+(verificand daca acestia sunt deja conectati sau se reconecteaza) si sa primeasca
+comenzi de la acestia(inchidere, subscribe si unsubscribe).
+Serverul mai este capabil sa primeasca mesaje de la clientul UDP si sa descifreze
+aceste mesaje si sa le trimita la clientii care au dat subscribe la un anumit topic.
+De asemenea serverul retine mesajele pentru clientii care s-au deconectat dar care
+vor sa primeasca mesajele odata ce se vor reconecta.
+
+Pentru implementarea temei am folosit limbajul C++ pentru a avea la dispozitie 
+mai multe structuri de date(vector) si unele functii predefinite.
+
